@@ -17,5 +17,10 @@ My own fork of CoffeeScript - with some bells and whistles
 - [5 6 7 8] or even 5 6 7 8... [[1 0 0][0 1 0][0 0 1]];
 - Ambiguous call syntax: first id must be for all stmt, others - minimum
 - Variable scope rules...
+- Vertical arrays, e.g.
+  cities =:
+    "Киев"
+    "Chișineu"
+    "București"
 - ...more to follow.
 </pre>
