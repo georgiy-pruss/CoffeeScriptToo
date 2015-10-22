@@ -8,8 +8,8 @@ My own fork of CoffeeScript - with some bells and whistles
   - [1..n] -- translate to i to n i.e. i=1;i&lt;N;++i,
   - [...n] -- 0 to n exclusive, i=0;i&lt;n;++i (same [..n], [0..n]),
   - [n...] -- n downto 1 (same [n...0],[n..1]),
-  - [m..n by -1] -- i=m;i>=n;--i,
-  - [m..n by k] -- general case, like now, but with step k;
+  - [m..n by -1] -- i=m;i>=n;--i ('by' already in for: [m..n] by k),
+  - [m..n by k] ??? arrays;
 - foo'abc' should be parsed! it's good for J, must be good here too;
 - unary // and %% as floor and frac (= x//1 and x%%1);
 - |x as Math.abs(x), maybe something for x.length, etc etc :)
