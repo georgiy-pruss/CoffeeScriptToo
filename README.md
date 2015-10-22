@@ -15,5 +15,7 @@ My own fork of CoffeeScript - with some bells and whistles
 - |x as Math.abs(x), maybe something for x.length, etc etc :)
 - "abc"*5 and [1,2,3]$10... others from J? we'll see;
 - [5 6 7 8] or even 5 6 7 8... [[1 0 0][0 1 0][0 0 1]];
+- Ambiguous call syntax: first id must be for all stmt, others - minimum
+- Variable scope rules...
 - ...more to follow.
 </pre>
