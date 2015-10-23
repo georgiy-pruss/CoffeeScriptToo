@@ -16,6 +16,9 @@ My own fork of CoffeeScript - with some bells and whistles
 - "abc"*5 and [1,2,3]$10... others from J? we'll see;
 - [5 6 7 8] or even 5 6 7 8... [[1 0 0][0 1 0][0 0 1]];
 - Ambiguous call syntax: first id must be for all stmt, others - minimum
+  Really weird. sum [1..5] is indexing array or calling fn with array argument?
+  Or sum[1..5] is one thing and sum [1..5] the other? Must be redone actually.
+  E.g. range must be without [], just 1..5 (and 1...5).
 - Variable scope rules...
 - Vertical arrays, e.g.
   cities =:
