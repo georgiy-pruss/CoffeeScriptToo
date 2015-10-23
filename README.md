@@ -19,11 +19,12 @@ My own fork of CoffeeScript - with some bells and whistles
   Really weird. sum [1..5] is indexing array or calling fn with array argument?
   Or sum[1..5] is one thing and sum [1..5] the other? Must be redone actually.
   E.g. range must be without [], just 1..5 (and 1...5).
-- Variable scope rules...
+- Variable scope rules... (BTW eval('var '+'abc'+' = '+'123') works)
 - Vertical arrays, e.g.
   cities =:
     "Киев"
     "Chișineu"
     "București"
+- macros from C: #define f(x,y) foo(#x,y) etc
 - ...more to follow.
 </pre>
