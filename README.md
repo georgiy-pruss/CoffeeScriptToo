@@ -25,6 +25,7 @@ My own fork of CoffeeScript - with some bells and whistles
     "Киев"
     "Chișineu"
     "București"
-- macros from C: #define f(x,y) foo(#x,y) etc
+- macros from C: #define rotl(x,k,n) (((x<<k)&((1<<n)-1))|(x>>>(n-k)))
+  all arguments are in () i.e. = ((((x)<<(k))&((1<<(n))-1))|((x)>>>((n)-(k))))
 - ...more to follow.
 </pre>
