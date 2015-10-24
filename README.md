@@ -40,7 +40,7 @@ My own fork of CoffeeScript - with some bells and whistles
   };
   alert(a + "," + (f()));
 - Vertical arrays, e.g.
-  cities =:
+  cities = <<         # or maybe >> ** ||     (:: can be for other things(? global scope?))
     "Киев"
     "Chișineu"
     "București"
