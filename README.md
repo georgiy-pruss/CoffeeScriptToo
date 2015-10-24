@@ -41,5 +41,6 @@ My own fork of CoffeeScript - with some bells and whistles
   }).apply(this), 3) >= 0) {
     foo();
   }
+- new X, new X(args) --> X!, X!(args) - just an idea, to get rid of going left
 - ...more to follow.
 </pre>
