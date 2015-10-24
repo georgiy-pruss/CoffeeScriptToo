@@ -42,5 +42,6 @@ My own fork of CoffeeScript - with some bells and whistles
     foo();
   }
 - new X, new X(args) --> X!, X!(args) - just an idea, to get rid of going left
+- OMG this bug is still there too! https://github.com/satyr/coco/wiki/wtfcs
 - ...more to follow.
 </pre>
