@@ -27,5 +27,19 @@ My own fork of CoffeeScript - with some bells and whistles
     "București"
 - macros from C: #define rotl(x,k,n) (((x<<k)&((1<<n)-1))|(x>>>(n-k)))
   all arguments are in () i.e. = ((((x)<<(k))&((1<<(n))-1))|((x)>>>((n)-(k))))
+- <span color='red'>REALLY????!!!!!</span> -->  
+  if 3 in [1..1000]
+    foo()
+      ↓
+  var i, results,
+    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
+  if (indexOf.call((function() {
+    results = [];
+    for (i = 1; i <= 1000; i++){ results.push(i); }
+    return results;
+  }).apply(this), 3) >= 0) {
+    foo();
+  }
 - ...more to follow.
 </pre>
