@@ -42,6 +42,7 @@ My own fork of CoffeeScript - with some bells and whistles
     foo();
   }
 - new X, new X(args) --> X!, X!(args) - just an idea, to get rid of going left
-- OMG this bug is still there too! https://github.com/satyr/coco/wiki/wtfcs
+- OMG this bug (unmatched unindentations) is still there too! https://github.com/satyr/coco/wiki/wtfcs
+  multiple for's in comprehension is right 
 - ...more to follow.
 </pre>
