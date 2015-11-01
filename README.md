@@ -13,6 +13,22 @@ My own fork of CoffeeScript - with some bells and whistles
 - unary // and %% as floor and frac (= x//1 and x%%1);
 - |x as Math.abs(x), maybe something for x.length, etc etc :)
 - "abc"*5 and [1,2,3]$10... others from J? we'll see;
+- binary
+  ~+  append     [1,2]~+3 = [1,2,3]
+  ~|  join       [1,2,3]~&'.' = '1.2.3'
+  ~:  split      'a,bb,,c'~/',' = ['a','bb','','c']
+  ~/  take       first y (last -y) ... like enlarge/shrink... TODO yet
+  ~\  drop       without first y (without last -y)
+  ~|  select     'abcde'~|[2,1,4] == 'bad'  ... or bit array.. TODO -- see J
+  ~*  repeat     'abc'~*3 = 'abcabcabc'
+  ~>  enlarge    'abc'~>2 = 'abc'  'abc'~>4 = 'abc '  also negative = left
+  ~<  shrink     'abc'~<2 = 'ab'   'abc'~<4 = 'abc'   also negative = left
+  ~^  starts     'abc'~^'ab'
+  ~$  ends       'abc'~$'bc'
+  ~?  contains   'abc'~?'b'  [1,2,3]~?2  {1:2,3:4}~?3
+  ~=  match      'abc'~=/^abc$/
+  unary
+  ##  length     ##'abc' = 3     ##[1,2,3,4] = 4
 - [5 6 7 8] or even 5 6 7 8... [[1 0 0][0 1 0][0 0 1]];
 - foo'abc' should be parsed! it's good for J, must be good here too;
   foo [1,2], foo[1,2] ? foo {1:2}, foo{1:2} ...
