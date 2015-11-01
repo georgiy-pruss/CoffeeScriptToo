@@ -3,32 +3,35 @@ My own fork of CoffeeScript - with some bells and whistles
 
 <pre>
 + Literals with underscores: 0xFFFF_FFFF -- done;
-- Pi, date/time literals etc - maybe;
+- Pi, date/time literals etc - maybe; 2p1
 - special cases for [m..n]:
   - [1..n] -- translate to i to n i.e. i=1;i&lt;N;++i,
   - [...n] -- 0 to n exclusive, i=0;i&lt;n;++i (same [..n], [0..n]),
   - [n...] -- n downto 1 (same [n...0],[n..1]),
   - [m..n by -1] -- i=m;i>=n;--i ('by' already in for: [m..n] by k),
   - [m..n by k] ??? arrays;
-- unary // and %% as floor and frac (= x//1 and x%%1);
-- |x as Math.abs(x), maybe something for x.length, etc etc :)
-- "abc"*5 and [1,2,3]$10... others from J? we'll see;
-- binary
-  ~+  append     [1,2]~+3 = [1,2,3]
+- binary ops
+  ~+  append     [1,2]~+3 = [1,2,3] or rather x.push(y)
   ~|  join       [1,2,3]~&'.' = '1.2.3'
   ~:  split      'a,bb,,c'~/',' = ['a','bb','','c']
-  ~/  take       first y (last -y) ... like enlarge/shrink... TODO yet
+  ~/  take       first y (last -y) ... like expand/shrink... TODO yet
   ~\  drop       without first y (without last -y)
-  ~|  select     'abcde'~|[2,1,4] == 'bad'  ... or bit array.. TODO -- see J
-  ~*  repeat     'abc'~*3 = 'abcabcabc'
-  ~>  enlarge    'abc'~>2 = 'abc'  'abc'~>4 = 'abc '  also negative = left
+  ~@  select     'abcde'~@[2,1,4] == 'bad' TODO -- see J
+  ~:  filter     'abcde'~:[0,1,2,0,0] = 'bcc' or bool array, or function
+  ~*  repeat     'abc'~*3 = 'abcabcabc'  [1,2]~*3 = [1,2,1,2,1,2]
+  ~#  reshape    'abc'~#5 = 'abcab'  like x$y in J
+  ~%  replace    'abc'~%'b','123' = 'a123c' = x.replace(y,z[,y2,z2]...)
+  ~>  expand     'abc'~>2 = 'abc'  'abc'~>4 = 'abc '  also negative = left
   ~<  shrink     'abc'~<2 = 'ab'   'abc'~<4 = 'abc'   also negative = left
   ~^  starts     'abc'~^'ab'
   ~$  ends       'abc'~$'bc'
   ~?  contains   'abc'~?'b'  [1,2,3]~?2  {1:2,3:4}~?3
   ~=  match      'abc'~=/^abc$/
-  unary
-  ##  length     ##'abc' = 3     ##[1,2,3,4] = 4
+- unary ops
+  &   length     &'abc' = 3     &[1,2,3,4] = 4
+  |   abs        |-3 = 3
+  //  floor      //x (= x//1)
+  %%  frac       %%x (= x%%1)
 - [5 6 7 8] or even 5 6 7 8... [[1 0 0][0 1 0][0 0 1]];
 - foo'abc' should be parsed! it's good for J, must be good here too;
   foo [1,2], foo[1,2] ? foo {1:2}, foo{1:2} ...
@@ -56,7 +59,7 @@ My own fork of CoffeeScript - with some bells and whistles
   };
   alert(a + "," + (f()));
 - Vertical arrays, e.g.
-  cities = <<         # or maybe >> ** ||     (:: can be for other things(? global scope?))
+  cities = ::         # or maybe << >> ** || []
     "Киев"
     "Chișineu"
     "București"
@@ -77,7 +80,8 @@ My own fork of CoffeeScript - with some bells and whistles
     foo();
   }
 - new X, new X(args) --> X!, X!(args) - just an idea, to get rid of going left
-- OMG this bug (unmatched unindentations) is still there too! https://github.com/satyr/coco/wiki/wtfcs
+- OMG this bug (unmatched unindentations) is still there too!
+  https://github.com/satyr/coco/wiki/wtfcs
   multiple for's in comprehension is right though
 - ...more to follow.
 </pre>
