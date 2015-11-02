@@ -10,7 +10,7 @@ My own fork of CoffeeScript - with some bells and whistles
   - [n...] -- n downto 1 (same [n...0],[n..1]),
   - [m..n by -1] -- i=m;i>=n;--i ('by' already in for: [m..n] by k),
   - [m..n by k] ??? arrays;
-- binary ops (e.g.) [-.!& left :)]
+- binary ops (e.g.) [-. left :)]
   ~+  append     [1,2]~+3 = [1,2,3] or rather x.push(y)
   ~|  join       [1,2,3]~|'.' = '1.2.3'
   ~:  split      'a,bb,,c'~:',' = ['a','bb','','c']
@@ -28,11 +28,13 @@ My own fork of CoffeeScript - with some bells and whistles
   ~?  contains   'abc'~?'b'  [1,2,3]~?2  {1:2,3:4}~?3
   ~=  match      'abc'~=/^abc$/
   ~~  approx     1~~(1+1e-15) or compare strings ignoring case...
+  ~-  diff?      ...
 - unary ops
   &   length     &'abc' = 3     &[1,2,3,4] = 4
   |   abs        |-3 = 3
   //  floor      //x (= x//1)
   %%  frac       %%x (= x%%1)
+  !   new        postfix:  Date! Date!('2015.1.1 0:00')
 - [5 6 7 8] or even 5 6 7 8... [[1 0 0][0 1 0][0 0 1]];
 - foo'abc' should be parsed! it's good for J, must be good here too;
   foo [1,2], foo[1,2] ? foo {1:2}, foo{1:2} ...
