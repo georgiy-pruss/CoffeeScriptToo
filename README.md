@@ -10,7 +10,7 @@ My own fork of CoffeeScript - with some bells and whistles
   - [n...] -- n downto 1 (same [n...0],[n..1]),
   - [m..n by -1] -- i=m;i>=n;--i ('by' already in for: [m..n] by k),
   - [m..n by k] ??? arrays;
-- binary ops (e.g.) [-~.!& left :)]
+- binary ops (e.g.) [-.!& left :)]
   ~+  append     [1,2]~+3 = [1,2,3] or rather x.push(y)
   ~|  join       [1,2,3]~|'.' = '1.2.3'
   ~:  split      'a,bb,,c'~:',' = ['a','bb','','c']
@@ -27,6 +27,7 @@ My own fork of CoffeeScript - with some bells and whistles
   ~$  ends       'abc'~$'bc'
   ~?  contains   'abc'~?'b'  [1,2,3]~?2  {1:2,3:4}~?3
   ~=  match      'abc'~=/^abc$/
+  ~~  approx     1~~(1+1e-15) or compare strings ignoring case...
 - unary ops
   &   length     &'abc' = 3     &[1,2,3,4] = 4
   |   abs        |-3 = 3
