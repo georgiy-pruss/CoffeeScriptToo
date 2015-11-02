@@ -3,17 +3,17 @@ My own fork of CoffeeScript - with some bells and whistles
 
 <pre>
 + Literals with underscores: 0xFFFF_FFFF -- done;
-- Pi, date/time literals etc - maybe; 2p1
+- Pi, date/time literals etc - maybe; 2p1 2015.2.28_15:30_+2
 - special cases for [m..n]:
   - [1..n] -- translate to i to n i.e. i=1;i&lt;N;++i,
   - [...n] -- 0 to n exclusive, i=0;i&lt;n;++i (same [..n], [0..n]),
   - [n...] -- n downto 1 (same [n...0],[n..1]),
   - [m..n by -1] -- i=m;i>=n;--i ('by' already in for: [m..n] by k),
   - [m..n by k] ??? arrays;
-- binary ops
+- binary ops (e.g.) [-~.!& left :)]
   ~+  append     [1,2]~+3 = [1,2,3] or rather x.push(y)
-  ~|  join       [1,2,3]~&'.' = '1.2.3'
-  ~:  split      'a,bb,,c'~/',' = ['a','bb','','c']
+  ~|  join       [1,2,3]~|'.' = '1.2.3'
+  ~:  split      'a,bb,,c'~:',' = ['a','bb','','c']
   ~/  take       first y (last -y) ... like expand/shrink... TODO yet
   ~\  drop       without first y (without last -y)
   ~@  select     'abcde'~@[2,1,4] == 'bad' TODO -- see J
