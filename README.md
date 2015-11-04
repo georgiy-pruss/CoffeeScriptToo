@@ -28,12 +28,13 @@ My own fork of CoffeeScript - with some bells and whistles
   ~?  contains   'abc'~?'b'  [1,2,3]~?2  {1:2,3:4}~?3
   ~=  match      'abc'~=/^abc$/
   ~~  approx     1~~(1+1e-15) or compare strings ignoring case?...
-  ~-  diff? encode/decode UTF8? ...
+  ~-  remove     line ~- /[\s\t\r\n]+$/
 - unary ops
   &   length     &'abc' = 3     &[1,2,3,4] = 4
   |   abs        |-3 = 3
   //  floor      //x (= x//1)
   %%  frac       %%x (= x%%1)
+  ^^  upper      ^^'tschüß' = 'TSCHÜSS'
   !   new        postfix:  Date! Date!('2015.1.1 0:00')
 - [5 6 7 8] or even 5 6 7 8... [[1 0 0][0 1 0][0 0 1]];
 - foo'abc' should be parsed! it's good for J, must be good here too;
