@@ -12,23 +12,23 @@ My own fork of CoffeeScript - with some bells and whistles
   - [m..n by k] ??? arrays;
 - binary ops (e.g.)
   ~+  append     [1,2]~+3 = [1,2,3] or rather x.push(y)
-  ~|  join       [1,2,3]~|'.' = '1.2.3'
-  ~:  split      'a,bb,,c'~:',' = ['a','bb','','c']
+  ~&  join       [1,2,3]~&'.' = '1.2.3'
+  ~|  split      'a,bb,,c'~|',' = ['a','bb','','c']
   ~/  take       first y (last -y) ... like expand/shrink... TODO yet
   ~\  drop       without first y (without last -y)
   ~@  select     'abcde'~@[2,1,4] == 'bad' TODO -- see J
   ~:  filter     'abcde'~:[0,1,2,0,0] = 'bcc' or bool array, or function
   ~*  repeat     'abc'~*3 = 'abcabcabc'  [1,2]~*3 = [1,2,1,2,1,2]
   ~#  reshape    'abc'~#5 = 'abcab'  like x$y in J
-  ~%  replace    'abc'~%'b','123' = 'a123c' = x.replace(y,z[,y2,z2]...)
+  ~%  replace    'abc'~%'b','123' = 'a123c' -- x.replace(y,z[,y2,z2]...)
   ~>  expand     'abc'~>2 = 'abc'  'abc'~>4 = 'abc '  also negative = left
   ~<  shrink     'abc'~<2 = 'ab'   'abc'~<4 = 'abc'   also negative = left
   ~^  starts     'abc'~^'ab'
   ~$  ends       'abc'~$'bc'
   ~?  contains   'abc'~?'b'  [1,2,3]~?2  {1:2,3:4}~?3
   ~=  match      'abc'~=/^abc$/
-  ~~  approx     1~~(1+1e-15) or compare strings ignoring case...
-  ~-  diff?      ...
+  ~~  approx     1~~(1+1e-15) or compare strings ignoring case?...
+  ~-  diff? encode/decode UTF8? ...
 - unary ops
   &   length     &'abc' = 3     &[1,2,3,4] = 4
   |   abs        |-3 = 3
@@ -42,6 +42,9 @@ My own fork of CoffeeScript - with some bells and whistles
   Really weird. sum [1..5] is indexing array or calling fn with array argument?
   Or sum[1..5] is one thing and sum [1..5] the other? Must be redone actually.
   E.g. range must be without [], just 1..5 (and 1...5).
+- Since "(nearly) everything is an expression", why not to use parentheses in
+  one-liners instead of braces?
+  if A then (if B then (C(); D()) else (for x in R then (K(); L()); M()); P()) else Q()
 - Variable scope rules... (BTW eval('var '+'abc'+' = '+'123') works)
 - BUT! It can be solved:
   a = d = 1
