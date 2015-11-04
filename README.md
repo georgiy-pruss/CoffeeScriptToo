@@ -71,9 +71,9 @@ My own fork of CoffeeScript - with some bells and whistles
     "București"
   YAML or LiveScript idea is also good. Maybe even the best:
   colors =
-    #FF0000
-    #00FF00
-    #0000FF
+    * #FF0000
+    * #00FF00
+    * #0000FF
 - Actually '#' can be used for both comments and other elements:
   ### ... inside line comment or multi-line comment ... ###
   # End-of-line comment. Note the space after '#' which you always put there anyway
