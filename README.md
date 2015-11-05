@@ -16,7 +16,7 @@ My own fork of CoffeeScript - with some bells and whistles
   ~|  split      'a,bb,,c'~|',' = ['a','bb','','c']
   ~/  take       first y (last -y) ... like expand/shrink... TODO yet
   ~\  drop       without first y (without last -y)
-  ~@  select     'abcde'~@[2,1,4] == 'bad' TODO -- see J
+  ~@  select     'abcde'~@[2,1,4] = 'bad' TODO -- see J
   ~:  filter     'abcde'~:[0,1,2,0,0] = 'bcc' or bool array, or function
   ~*  repeat     'abc'~*3 = 'abcabcabc'  [1,2]~*3 = [1,2,1,2,1,2]
   ~#  reshape    'abc'~#5 = 'abcab'  like x$y in J
@@ -76,10 +76,12 @@ My own fork of CoffeeScript - with some bells and whistles
     * #00FF00
     * #0000FF
 - Actually '#' can be used for both comments and other elements:
-  ### ... inside line comment or multi-line comment ... ###
+  ### ... inline comment or multi-line comment ... ###
   # End-of-line comment. Note the space after '#' which you always put there anyway
-  #0123456789ABCDEF -- hex number
+  #00FF00 #0123456789ABCDEF -- hex numbers
+  2#0101 8#777 35#nerd -- numbers with radix
   #if #else #endif #ifdef #ifndef -- preprcessor/macros
+  ~# reshape, see ops above
 - macros from C: #define rotl(x,k,n) (((x<<k)&((1<<n)-1))|(x>>>(n-k)))
   all arguments are in () i.e. = ((((x)<<(k))&((1<<(n))-1))|((x)>>>((n)-(k))))
 - <span color='red'>REALLY????!!!!!</span> -->  
