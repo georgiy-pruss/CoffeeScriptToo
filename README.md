@@ -28,7 +28,7 @@ My own fork of CoffeeScript - with some bells and whistles
   ~?  contains   'abc'~?'b'  [1,2,3]~?2  {1:2,3:4}~?3
   ~=  match      'abc'~=/^abc$/
   ~~  approx     1~~(1+1e-15) or compare strings ignoring case?...
-  ~-  remove     line ~- /[\s\t\r\n]+$/
+  ~-  remove     line ~- /[\s\t\r\n]+$/ or line ~- " \t\n\r"
 - unary ops
   &   length     &'abc' = 3     &[1,2,3,4] = 4
   |   abs        |-3 = 3
